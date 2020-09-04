@@ -1,6 +1,6 @@
 # Online version of Simon Game.
 
-**Completed project available here:**
+**Completed project available [here](https://mikekash.github.io/SimonGame/).**
 
 
 Goal of this project was to get a better grip on jQuery framework and Javascript logic in general.
