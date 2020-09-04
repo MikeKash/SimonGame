@@ -60,10 +60,11 @@ function checkAnswer(currentLevel) {
     } else {     
         playSound("wrong");
         $("body").addClass( "game-over");
+        $( ".game_btn").html("Start Over!");
         setTimeout(function() {
             $("body").removeClass( "game-over");;            
         }, 250);
-        $( "#level-title").html("Game Over, Press Any Key to Restart");
+        $( "#level-title").text("Game Over, Press Any Key or START OVER button to Restart");
         startOver();                
     } 
    
@@ -87,6 +88,18 @@ $(document).keypress(function() {
      gameStarted = true;
     };      
 });
+
+$( ".game_btn").html("Start the Game!");
+
+$(".game_btn").click(function() {
+    if (!gameStarted) {
+    $( "#level-title").html("Level 0");
+     nextSequence();
+     gameStarted = true;
+    };      
+});
+
+
 
 // function to restart the game
 function startOver() {

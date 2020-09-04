@@ -42,7 +42,7 @@ body {
 }
 
 .game{
-   opacity: 0.1;
+   opacity: 0;
 }
 
 .game.shown{
@@ -86,12 +86,12 @@ body {
 }
 
 #level-title {   
-  margin-top: 2em;
+  margin-top: 0.5em;
   font-family: 'Press Start 2P', cursive;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #FEF2BF;
   line-height: 1.7;
-  height: 20vh;
+  height: 18vh;
 }
 
 .container {
@@ -136,6 +136,9 @@ body {
   background-color: grey;
 }
 
+.game_btn {
+  margin-top: 1.5em;
+}
 
 footer {
   text-align: left;
@@ -143,7 +146,7 @@ footer {
 }
 
 footer p {
-  margin-top: 25%;
+  margin: 15% 1em 0;
   opacity: 0.8;
 }
 
@@ -182,9 +185,9 @@ footer p {
 
   #level-title { 
     height: 15vh;
-    width: 50%;
+    width: 90%;
     margin: 0.5em auto;
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: #FEF2BF;
     line-height: 1.5;
   }
@@ -205,6 +208,18 @@ footer p {
     margin: 0;
     opacity: 0.8;
   }
+
+  .game_btn {
+    position: absolute;
+    margin: 0;
+    bottom: 45%;
+    right: 15%;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 30px 20px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #154682;
+  }
 }
 
 @media only screen and (max-width: 800px) and (orientation: landscape) {
@@ -212,7 +227,7 @@ footer p {
    
   #level-title {
     height: 20vh;
-    width: 60%;
+    width: 90%;
     margin: 0.5em auto;
     font-size: 1.2rem;    
     margin-bottom: 0;
@@ -221,11 +236,29 @@ footer p {
    .btn {
     margin: 1%;
     display: inline-block;
-    --size: 90vmin;
+    --size: 80vmin;
     width: calc(var(--size) / 3);
     height: calc(var(--size) / 3);
     border: 5px solid black;
     border-radius: 20%;
+}
+
+.game_btn {
+  position: absolute;
+  margin: 0;
+  bottom: 10%;
+  right: 3%;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 10px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #154682;
+}
+
+
+footer p {
+  margin: 0 1em 0;
+  opacity: 0.8;
 }
 
 }
