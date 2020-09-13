@@ -1,4 +1,4 @@
-
+/* GENERAL STYLES */
 
 body {
   height: 95vh;
@@ -8,6 +8,10 @@ body {
   flex-direction: column;
   align-content: center;
   box-sizing: border-box;
+}
+
+.hide-content {
+  display: none !important;
 }
 
 .message {

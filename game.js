@@ -1,5 +1,4 @@
 
-
 $(".message_btn").click(() => {
     $(".message").addClass("hidden");    
     $(".game").addClass("shown");
@@ -31,7 +30,7 @@ function nextSequence() {
     playSound(randomChosenColour);  
     buttonAnimation(randomChosenColour);    
     level ++;
-    $( "#level-title").html("Level " + level);
+    $("#level-title").html("Level " + level);
 }
 
 // Function to detect what button user pressed and push that value into the array to store.
@@ -64,7 +63,12 @@ function checkAnswer(currentLevel) {
         setTimeout(function() {
             $("body").removeClass( "game-over");;            
         }, 250);
-        $( "#level-title").text("Game Over, Press Any Key or START OVER button to Restart");
+        if (window_width > 800) {
+            $("#level-title").text("Game Over! Press Any Key to Restart.");            
+        } else {
+            $("#level-title").text("Game Over! Press START OVER button to Restart.");
+        }
+        
         startOver();                
     } 
    
@@ -99,8 +103,6 @@ $(".game_btn").click(function() {
     };      
 });
 
-
-
 // function to restart the game
 function startOver() {
     level = 0;
@@ -108,3 +110,13 @@ function startOver() {
     gameStarted = false;
 }
 
+
+// hide button game on large screen
+let window_width = window.innerWidth;
+let window_height = window.innerHeight;
+
+if (window_width > 800) {
+    $(".game_btn").addClass("hide-content");
+    $("#level-title").html("Press Any Key to Start");  
+    $("#level-title").width( "60%" );  
+};
